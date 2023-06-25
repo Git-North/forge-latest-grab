@@ -1,1 +1,2 @@
-Get-Content .\forgehref.tmp2 | % {$_ -replace "<","" -replace ">","" -replace "bra ","set " -replace "  ","" -replace "(Direct Download)/a",""} |Out-File .\forgehref.tmp
+Get-Content .\forgehref.tmp2 | % {$_ -replace "<","" -replace ">","" -replace "bra ","set " -replace "  ","" -replace "\(Direct Download\)\/a",""} |Out-File .\forgehref.tmp
+(Get-Content -path ".\forgehref.tmp") | Set-Content -Encoding ascii -Path ".\forgehref.tmp.cmd"
